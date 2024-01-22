@@ -60,6 +60,6 @@ When('I type a email address {string} and a comment {string} within the comment 
     cy.get('textarea[name="message"]').type(comment);
 })
 
-When('I should be presented with a message {string}',(message) => {
+Then('I should be presented with a message {string}',(message) => {
     cy.xpath("//h1 | //body").contains(message);
 })

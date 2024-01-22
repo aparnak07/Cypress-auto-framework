@@ -1,3 +1,4 @@
+@contact-us @regression
 Feature: WebdriverUniversity - Contact Us Page
 
     Background: Pre-conditions
@@ -27,9 +28,11 @@ Feature: WebdriverUniversity - Contact Us Page
         And I type a specific word "Test111" and number 6788 within the comment input field
         And I click the Submit button
         Then I should be presented with a successful contact us submission message
-
+    
+    @smoke
     #Create different scenarios with Scenario Outline
     Scenario Outline: Validate Contact Us Page
+        # '' - used for string, if reg ex used is word, it does not have to enclosed within ''
         And I type a first name <firstName> and a last name '<lastName>'
         And I type a email address '<email>' and a comment '<comment>' within the comment input field
         And I click the Submit button
